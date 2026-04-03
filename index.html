@@ -4,321 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Body of Christ Ministries</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            color: white;
+            background-color: black;
         }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-
-        /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
-            padding: 1.5rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.2);
-        }
-
-        header h1 {
-            color: #1a1a1a;
-            font-size: 2.5rem;
-            font-weight: 700;
+            background-color: gold;
+            padding: 20px;
             text-align: center;
-            letter-spacing: -1px;
-            margin-bottom: 1rem;
         }
-
-        nav {
+        .hero {
+            background: url('hero-image.jpg') center / cover;
+            height: 300px;
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            padding: 0 1rem;
+            align-items: center;
+            text-align: center;
+            color: black;
         }
-
-        nav a {
-            color: #1a1a1a;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
+        .section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .prayer-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: none;
             border-radius: 5px;
-            transition: all 0.3s ease;
-            position: relative;
         }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #1a1a1a;
-            transition: width 0.3s ease;
+        button {
+            background-color: gold;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-
-        nav a:hover::after {
-            width: 100%;
+        button:hover {
+            opacity: 0.8;
         }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            padding: 6rem 2rem;
-            text-align: center;
-            border-bottom: 3px solid #d4af37;
-        }
-
-        .hero h2 {
-            font-size: 3.5rem;
-            color: #d4af37;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: #b0b0b0;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        /* Sections */
-        section {
-            background: rgba(212, 175, 55, 0.05);
-            border-left: 4px solid #d4af37;
-            border-radius: 10px;
-            padding: 3rem;
-            margin-bottom: 2.5rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        section:hover {
-            background: rgba(212, 175, 55, 0.1);
-            transform: translateX(10px);
-            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.1);
-        }
-
-        section h2 {
-            font-size: 2.2rem;
-            color: #ffd700;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        section p {
-            font-size: 1.1rem;
-            color: #d0d0d0;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        section ul {
-            list-style: none;
-            margin-left: 0;
-        }
-
-        section li {
-            font-size: 1.1rem;
-            color: #d0d0d0;
-            margin: 1rem 0;
-            padding-left: 2rem;
-            position: relative;
-            line-height: 1.8;
-        }
-
-        section li::before {
-            content: '✦';
-            position: absolute;
-            left: 0;
-            color: #d4af37;
-            font-size: 1.2rem;
-        }
-
-        a {
-            color: #ffd700;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #ffed4e;
-            text-decoration: underline;
-        }
-
-        /* CTA Button */
-        .cta-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
-            color: #1a1a1a;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-            border: 2px solid transparent;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
-        }
-
-        /* Footer */
         footer {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-            color: #b0b0b0;
             text-align: center;
-            padding: 2rem;
-            border-top: 3px solid #d4af37;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        footer p span {
-            color: #d4af37;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            nav {
-                gap: 1rem;
-            }
-
-            nav a {
-                font-size: 0.9rem;
-                padding: 0.4rem 0.8rem;
-            }
-
-            .hero h2 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            section {
-                padding: 2rem;
-                margin-bottom: 1.5rem;
-            }
-
-            section h2 {
-                font-size: 1.8rem;
-            }
-
-            section p {
-                font-size: 1rem;
-            }
-
-            section li {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .hero {
-                padding: 3rem 1rem;
-            }
-
-            main {
-                padding: 2rem 1rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-
-            section h2 {
-                font-size: 1.5rem;
-                letter-spacing: 1px;
-            }
+            padding: 20px;
+            background-color: gold;
+            color: black;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>✝ Body of Christ Ministries</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#schedule">Schedule</a>
-            <a href="#locations">Locations</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>Welcome to Body of Christ Ministries</h1>
     </header>
-
     <div class="hero">
-        <h2>Welcome to Our Community</h2>
-        <p>Spreading the love of Christ and serving our community with faith, hope, and compassion</p>
+        <h2>Join Our Mission</h2>
     </div>
-
-    <main>
-        <section id="about">
-            <h2>About Our Ministry</h2>
-            <p>Body of Christ Ministries is dedicated to spreading the gospel of Jesus Christ and serving our community through worship, prayer, and spiritual guidance. We believe in the power of faith to transform lives and strengthen our bonds as a Christian family.</p>
-            <p>Our mission is to create a welcoming environment where people of all backgrounds can grow spiritually and find support in their faith journey.</p>
-        </section>
-
-        <section id="schedule">
-            <h2>Service Schedule</h2>
-            <ul>
-                <li><strong>Sunday Worship Service:</strong> 10:00 AM - Join us for inspiring worship and spiritual growth</li>
-                <li><strong>Wednesday Prayer Meeting:</strong> 7:00 PM - Community prayer and fellowship</li>
-                <li><strong>Friday Bible Study:</strong> 6:30 PM - Deep dive into Scripture and discussion</li>
-                <li><strong>Saturday Youth Group:</strong> 5:00 PM - Fun and faith-building activities for young adults</li>
-            </ul>
-        </section>
-
-        <section id="locations">
-            <h2>Our Locations</h2>
-            <p>We have two convenient locations to serve you better:</p>
-            <ul>
-                <li><strong>Main Campus - Council Bluffs:</strong> 123 Faith*
-
+    <div class="section">
+        <h3>Schedule</h3>
+        <p>Check out our schedule for services and events.</p>
+    </div>
+    <div class="section">
+        <h3>Locations</h3>
+        <p>Find us at the following locations...</p>
+    </div>
+    <div class="section">
+        <h3>Prayer Requests</h3>
+        <form class="prayer-form" action="https://formspree.io/f/xbdpavwb" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="request">Prayer Request:</label>
+            <textarea id="request" name="request" rows="4" required></textarea>
+            <button type="submit">Submit Prayer Request</button>
+        </form>
+    </div>
+    <div class="section">
+        <h3>Donations</h3>
+        <p>Support our mission with your generous donations.</p>
+    </div>
+    <div class="section">
+        <h3>Connect</h3>
+        <p>Follow us on social media to stay updated.</p>
+    </div>
+    <div class="section">
+        <h3>Contact</h3>
+        <p>Contact us at info@bodyofchristministries.org</p>
+    </div>
+    <footer>
+        <p>&copy; 2026 Body of Christ Ministries</p>
+    </footer>
+</body>
+</html>
