@@ -671,6 +671,25 @@ body {
     transform: translateY(-2px);
 }
 
+/* Bot trap — visually hidden from humans */
+.bot-trap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.prayer-error {
+    background-color: rgba(180, 40, 40, 0.2);
+    border: 1px solid #b42828;
+    color: #ff8a8a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
 /* Responsive — Tablet & below (≤768px) */
 @media (max-width: 768px) {
     .header .container {
