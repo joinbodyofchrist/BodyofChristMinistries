@@ -309,6 +309,13 @@ body {
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
+.social-link--disabled {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+    border-style: dashed;
+}
+
 /* Contact Section */
 .contact {
     padding: 80px 20px;
