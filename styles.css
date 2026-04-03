@@ -324,6 +324,93 @@ body {
     font-weight: 600;
 }
 
+/* Prayer Request Section */
+.prayer {
+    padding: 80px 20px;
+    background-color: var(--black);
+}
+
+.prayer h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.prayer-lead {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.prayer-form {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: var(--dark-gray);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    padding: 14px 16px;
+    color: var(--text-white);
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.prayer-submit {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--gold);
+    color: var(--black);
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prayer-submit:hover {
+    background-color: #c49e2a;
+    transform: translateY(-2px);
+}
+
 /* Responsive — Tablet & below (≤768px) */
 @media (max-width: 768px) {
     .header .container {
@@ -359,6 +446,7 @@ body {
 
     .schedule,
     .locations,
+    .prayer,
     .connect,
     .contact {
         padding: 60px 20px;
@@ -366,6 +454,7 @@ body {
 
     .schedule h2,
     .locations h2,
+    .prayer h2,
     .connect h2,
     .contact h2 {
         font-size: 32px;
@@ -420,6 +509,7 @@ body {
 
     .schedule,
     .locations,
+    .prayer,
     .connect,
     .contact {
         padding: 40px 16px;
@@ -427,6 +517,7 @@ body {
 
     .schedule h2,
     .locations h2,
+    .prayer h2,
     .connect h2,
     .contact h2 {
         font-size: 26px;
