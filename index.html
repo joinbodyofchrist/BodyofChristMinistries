@@ -15,10 +15,8 @@
         <div class="container">
             <div class="logo">
                 <div class="logo-text">
-                    <h1 style="font-size: 28px; color: #d4af37; letter-spacing: 2px; font-weight: 700;">
-                        ✝ BODY OF CHRIST MINISTRIES
-                    </h1>
-                    <p style="font-size: 14px; color: #d4af37; letter-spacing: 1px;">Jesus Christ Preaching Church</p>
+                    <h1>✝ BODY OF CHRIST MINISTRIES</h1>
+                    <p>Jesus Christ Preaching Church</p>
                 </div>
             </div>
             <nav class="nav">
@@ -50,7 +48,6 @@
         <div class="container">
             <h2>Our Schedule</h2>
             <div class="schedule-grid">
-                <!-- Sunday -->
                 <div class="schedule-card">
                     <div class="schedule-day">Sunday</div>
                     <div class="schedule-item">
@@ -65,7 +62,6 @@
                     </div>
                 </div>
 
-                <!-- Wednesday -->
                 <div class="schedule-card">
                     <div class="schedule-day">Wednesday</div>
                     <div class="schedule-item">
@@ -83,7 +79,6 @@
         <div class="container">
             <h2>Our Locations</h2>
             <div class="locations-grid">
-                <!-- Council Bluffs -->
                 <div class="location-card">
                     <h3>Council Bluffs, IA</h3>
                     <p><strong>Sunday Services</strong></p>
@@ -94,7 +89,6 @@
                     </p>
                 </div>
 
-                <!-- Omaha -->
                 <div class="location-card">
                     <h3>Omaha, NE</h3>
                     <p><strong>Wednesday Bible Study</strong></p>
@@ -116,25 +110,25 @@
             <p class="section-intro">Submit your prayer request and let our community lift you up in prayer. We believe in the power of prayer!</p>
             
             <div class="prayer-container">
-                <form id="prayerForm" class="prayer-form">
+                <form action="https://formspree.io/f/xbdpavwb" method="POST" class="prayer-form" id="prayerForm">
                     <div class="form-group">
-                        <label for="prayerName">Your Name</label>
-                        <input type="text" id="prayerName" name="prayerName" required placeholder="Enter your name">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" required placeholder="Enter your name">
                     </div>
 
                     <div class="form-group">
-                        <label for="prayerEmail">Email Address</label>
-                        <input type="email" id="prayerEmail" name="prayerEmail" required placeholder="your@email.com">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" required placeholder="your@email.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="prayerRequest">Your Prayer Request</label>
-                        <textarea id="prayerRequest" name="prayerRequest" rows="6" required placeholder="Please share what you would like us to pray about..."></textarea>
+                        <label for="prayer_request">Your Prayer Request</label>
+                        <textarea name="prayer_request" id="prayer_request" rows="6" required placeholder="Please share what you would like us to pray about..."></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="prayerCategory">Prayer Category (Optional)</label>
-                        <select id="prayerCategory" name="prayerCategory">
+                        <label for="category">Prayer Category (Optional)</label>
+                        <select name="category" id="category">
                             <option value="">Select a category...</option>
                             <option value="health">Health & Healing</option>
                             <option value="family">Family</option>
@@ -238,25 +232,21 @@
     </footer>
 
     <script>
-        // Handle Prayer Request Form
+        // Handle form submission with Formspree
         document.getElementById('prayerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('prayerName').value;
-            const email = document.getElementById('prayerEmail').value;
-            const request = document.getElementById('prayerRequest').value;
-            const category = document.getElementById('prayerCategory').value;
-            
-            // Show success message
-            document.getElementById('prayerForm').style.display = 'none';
-            document.getElementById('prayerSuccess').style.display = 'block';
-            
-            // Reset form after 5 seconds
-            setTimeout(() => {
-                document.getElementById('prayerForm').reset();
-                document.getElementById('prayerForm').style.display = 'block';
-                document.getElementById('prayerSuccess').style.display = 'none';
-            }, 5000);
+            // Formspree will handle the submission
+            // Show success message after submission
+            setTimeout(function() {
+                document.getElementById('prayerForm').style.display = 'none';
+                document.getElementById('prayerSuccess').style.display = 'block';
+                
+                // Reset after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('prayerForm').reset();
+                    document.getElementById('prayerForm').style.display = 'block';
+                    document.getElementById('prayerSuccess').style.display = 'none';
+                }, 5000);
+            }, 1000);
         });
     </script>
 
