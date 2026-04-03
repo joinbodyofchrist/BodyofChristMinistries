@@ -68,6 +68,7 @@
       }
 
       // Show loading state
+      var originalBtnText = submitBtn.textContent;
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
 
@@ -96,7 +97,7 @@
         })
         .finally(function () {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Submit Prayer Request';
+          submitBtn.textContent = originalBtnText;
         });
     });
   }

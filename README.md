@@ -9,12 +9,22 @@ hosted for free on **GitHub Pages**.
 
 | Page | File | Description |
 |------|------|-------------|
-| Home | `index.html` | Landing page with hero, mission, and Facebook CTA |
+| Home | `index.html` | Landing page with hero, mission, service times, and Facebook CTA |
 | Statement of Faith | `faith.html` | Core biblical beliefs |
 | Events | `events.html` | Dynamic event list from `data/events.json` |
 | Give / Donate | `give.html` | Giving page with multiple donation options |
 | Prayer Request | `prayer.html` | Formspree-powered prayer request form |
-| Contact | `contact.html` | Email, Facebook, and location info |
+| Contact | `contact.html` | Service times, addresses, Facebook, and email info |
+
+---
+
+## ⏰ Service Times
+
+| Day | Time | What | Location |
+|-----|------|------|----------|
+| **Sunday** | 9:00 AM | Bible Study & Coffee | 16 Bennett Ave, Council Bluffs, IA 51503 |
+| **Sunday** | 10:00 AM | Church Service | 16 Bennett Ave, Council Bluffs, IA 51503 |
+| **Wednesday** | 6:00 – 7:00 PM | Night Bible Study | Sozo Coffee House, 1314 Jones Street, Omaha, NE 68102 |
 
 ---
 
@@ -32,18 +42,19 @@ hosted for free on **GitHub Pages**.
 
 ## ✏️ Updating Content
 
-### Replace Placeholders
+### Remaining Placeholders
 
-Search the files for the following placeholder strings and replace them
-with your real values:
+The following items still use placeholder values and should be updated:
 
-| Placeholder | Where to change | Example |
+| Placeholder | Where to change | How to update |
 |---|---|---|
-| `PLACEHOLDER_FACEBOOK_PAGE` | All HTML files — `<a href="...">` and footer | `YourMinistryPageName` |
-| `PLACEHOLDER_MINISTRY_EMAIL.com` | `contact.html` | `info@bodyofchristmin.org` |
-| `PLACEHOLDER_GIVING_URL` | `give.html` | `https://cash.app/$YourCashTag` |
-| `PLACEHOLDER_CASHTAG` | `give.html` | `$BodyofChristMin` |
-| `XXXXXXX` in Formspree action | `prayer.html` | Your Formspree form ID, e.g. `mwpqabcd` |
+| `PLACEHOLDER_MINISTRY_EMAIL.com` | `contact.html` | Replace with your real email, e.g. `info@bodyofchristmin.org` |
+| `PLACEHOLDER_GIVING_URL` | `give.html` | Replace with your online giving link, e.g. `https://cash.app/$YourCashTag` |
+| `PLACEHOLDER_CASHTAG` | `give.html` | Replace with your Cash App $Cashtag |
+| `XXXXXXX` in Formspree action | `prayer.html` | Replace with your Formspree form ID (see below) |
+
+> ✅ **Facebook URL** — already set to `https://www.facebook.com/profile.php?id=61582607797300`  
+> ✅ **Service times & addresses** — already set (see above)
 
 ### Update Events
 
@@ -57,7 +68,7 @@ Each event has these fields:
   "title": "Event Name",
   "date": "YYYY-MM-DD",
   "time": "10:00 AM",
-  "location": "Main Sanctuary",
+  "location": "16 Bennett Ave, Council Bluffs, IA 51503",
   "description": "Optional description of the event."
 }
 ```

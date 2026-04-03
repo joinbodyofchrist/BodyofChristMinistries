@@ -1,44 +1,107 @@
 [
   {
-    "title": "Sunday Morning Worship",
+    "title": "Sunday Bible Study & Coffee",
+    "date": "2026-04-05",
+    "time": "9:00 AM",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
+    "description": "Start your Sunday morning with coffee, fellowship, and digging into God's Word together."
+  },
+  {
+    "title": "Sunday Church Service",
     "date": "2026-04-05",
     "time": "10:00 AM",
-    "location": "Main Sanctuary",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
     "description": "Join us for our weekly Sunday morning worship service. All are welcome!"
   },
   {
-    "title": "Wednesday Bible Study",
+    "title": "Wednesday Night Bible Study",
     "date": "2026-04-08",
-    "time": "7:00 PM",
-    "location": "Fellowship Hall",
-    "description": "Midweek Bible study and prayer. Bring your Bible and a friend."
+    "time": "6:00 – 7:00 PM",
+    "location": "Sozo Coffee House, 1314 Jones Street, Omaha, NE 68102",
+    "description": "Midweek Bible study and prayer at Sozo Coffee House. Bring your Bible and a friend!"
+  },
+  {
+    "title": "Sunday Bible Study & Coffee",
+    "date": "2026-04-12",
+    "time": "9:00 AM",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
+    "description": "Start your Sunday morning with coffee, fellowship, and digging into God's Word together."
+  },
+  {
+    "title": "Sunday Church Service",
+    "date": "2026-04-12",
+    "time": "10:00 AM",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
+    "description": "Join us for our weekly Sunday morning worship service. All are welcome!"
+  },
+  {
+    "title": "Wednesday Night Bible Study",
+    "date": "2026-04-15",
+    "time": "6:00 – 7:00 PM",
+    "location": "Sozo Coffee House, 1314 Jones Street, Omaha, NE 68102",
+    "description": "Midweek Bible study and prayer at Sozo Coffee House. Bring your Bible and a friend!"
   },
   {
     "title": "Community Outreach Day",
     "date": "2026-04-18",
     "time": "9:00 AM – 1:00 PM",
-    "location": "Community Center",
+    "location": "Council Bluffs, IA",
     "description": "Join us as we serve our local community. Volunteers welcome — all ages!"
+  },
+  {
+    "title": "Sunday Bible Study & Coffee",
+    "date": "2026-04-19",
+    "time": "9:00 AM",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
+    "description": "Start your Sunday morning with coffee, fellowship, and digging into God's Word together."
+  },
+  {
+    "title": "Sunday Church Service",
+    "date": "2026-04-19",
+    "time": "10:00 AM",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
+    "description": "Join us for our weekly Sunday morning worship service. All are welcome!"
+  },
+  {
+    "title": "Wednesday Night Bible Study",
+    "date": "2026-04-22",
+    "time": "6:00 – 7:00 PM",
+    "location": "Sozo Coffee House, 1314 Jones Street, Omaha, NE 68102",
+    "description": "Midweek Bible study and prayer at Sozo Coffee House. Bring your Bible and a friend!"
   },
   {
     "title": "Youth Night",
     "date": "2026-04-24",
     "time": "6:30 PM",
-    "location": "Youth Room",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
     "description": "A special evening for youth — worship, games, and the Word of God."
   },
   {
-    "title": "Sunday Morning Worship",
+    "title": "Sunday Bible Study & Coffee",
+    "date": "2026-04-26",
+    "time": "9:00 AM",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
+    "description": "Start your Sunday morning with coffee, fellowship, and digging into God's Word together."
+  },
+  {
+    "title": "Sunday Church Service",
     "date": "2026-04-26",
     "time": "10:00 AM",
-    "location": "Main Sanctuary",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
     "description": "Join us for our weekly Sunday morning worship service. All are welcome!"
+  },
+  {
+    "title": "Wednesday Night Bible Study",
+    "date": "2026-04-29",
+    "time": "6:00 – 7:00 PM",
+    "location": "Sozo Coffee House, 1314 Jones Street, Omaha, NE 68102",
+    "description": "Midweek Bible study and prayer at Sozo Coffee House. Bring your Bible and a friend!"
   },
   {
     "title": "Prayer & Intercession Night",
     "date": "2026-05-01",
     "time": "7:00 PM",
-    "location": "Main Sanctuary",
+    "location": "16 Bennett Ave, Council Bluffs, IA 51503",
     "description": "A dedicated evening of prayer for our community, nation, and the world."
   }
 ]
