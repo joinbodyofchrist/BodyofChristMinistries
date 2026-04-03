@@ -48,13 +48,13 @@ The following items still use placeholder values and should be updated:
 
 | Placeholder | Where to change | How to update |
 |---|---|---|
-| `PLACEHOLDER_MINISTRY_EMAIL.com` | `contact.html` | Replace with your real email, e.g. `info@bodyofchristmin.org` |
 | `PLACEHOLDER_GIVING_URL` | `give.html` | Replace with your online giving link, e.g. `https://cash.app/$YourCashTag` |
 | `PLACEHOLDER_CASHTAG` | `give.html` | Replace with your Cash App $Cashtag |
-| `XXXXXXX` in Formspree action | `prayer.html` | Replace with your Formspree form ID (see below) |
 
-> ✅ **Facebook URL** — already set to `https://www.facebook.com/profile.php?id=61582607797300`  
+> ✅ **Facebook URL** — `https://www.facebook.com/profile.php?id=61582607797300`
 > ✅ **Service times & addresses** — already set (see above)
+> ✅ **Formspree form** — `https://formspree.io/f/xbdpavwb`
+> ✅ **Contact email** — `joinbodyofchrist@gmail.com`
 
 ### Update Events
 
