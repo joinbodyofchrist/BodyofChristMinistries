@@ -13,7 +13,7 @@ const EVENTS = [
   {
     title: "Bingo Night",
     date: "2026-04-17",
-    time: "7:30 PM",
+    time: "6:00 – 7:30 PM",
     location: "16 Bennett Ave, Council Bluffs, IA 51503",
     description: "Come enjoy a fun evening of bingo at the church. Come win really cool prizes! Friends and family welcome!"
   },
