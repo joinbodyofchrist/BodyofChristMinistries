@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-padding-top: 98px; /* offset for sticky header */
+    scroll-padding-top: 80px;
     scroll-behavior: smooth;
 }
 
@@ -32,7 +32,7 @@ body {
 /* Header & Navigation */
 .header {
     background-color: var(--dark-gray);
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: 3px solid var(--gold);
     position: sticky;
     top: 0;
@@ -53,8 +53,10 @@ body {
 }
 
 .logo-img {
-    height: 55px;
+    height: 90px;
     width: auto;
+    mix-blend-mode: screen;
+    margin: -10px 0; /* pull image flush — trims excess black padding in the JPG */
 }
 
 .nav {
@@ -782,7 +784,7 @@ body {
 /* Responsive — Small phones (≤480px) */
 @media (max-width: 480px) {
     .logo-img {
-        height: 40px;
+        height: 70px;
     }
 
     .nav a {
