@@ -1,254 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Body of Christ Ministries - Jesus Christ Preaching Church. Sunday Bible Study & Service in Council Bluffs, IA. Wednesday Bible Study in Omaha, NE.">
-    <title>Body of Christ Ministries - Jesus Christ Preaching Church</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <div class="logo-text">
-                    <h1>✝ BODY OF CHRIST MINISTRIES</h1>
-                    <p>Jesus Christ Preaching Church</p>
-                </div>
-            </div>
-            <nav class="nav">
-                <a href="#home">Home</a>
-                <a href="#schedule">Schedule</a>
-                <a href="#locations">Locations</a>
-                <a href="#prayer">Prayer</a>
-                <a href="#donate">Donate</a>
-                <a href="#connect">Connect</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>BODY OF CHRIST</h1>
-            <p class="tagline">Jesus Christ Preaching Church</p>
-            <p class="welcome-message">
-                Welcome to Body of Christ Ministries, where we are dedicated to spreading the Gospel, 
-                building faith, and serving our community through the love and truth of Jesus Christ. 
-                Join us for Bible study, worship, and fellowship as we grow together in Christ.
-            </p>
-        </div>
-    </section>
-
-    <!-- Schedule Section -->
-    <section id="schedule" class="schedule">
-        <div class="container">
-            <h2>Our Schedule</h2>
-            <div class="schedule-grid">
-                <div class="schedule-card">
-                    <div class="schedule-day">Sunday</div>
-                    <div class="schedule-item">
-                        <h3>Bible Study & Coffee</h3>
-                        <div class="time">9:00 AM</div>
-                        <div class="location">Spiritual growth and fellowship over coffee</div>
-                    </div>
-                    <div class="schedule-item">
-                        <h3>Church Service</h3>
-                        <div class="time">10:00 AM</div>
-                        <div class="location">Main worship service and preaching of God's Word</div>
-                    </div>
+<!-- Prayer Request Section -->
+<section id="prayer" class="prayer-section">
+    <div class="container">
+        <h2>Prayer Requests</h2>
+        <p class="section-intro">Submit your prayer request and let our community lift you up in prayer. We believe in the power of prayer!</p>
+        
+        <div class="prayer-container">
+            <form action="https://formspree.io/f/xbdpavwb" method="POST" class="prayer-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" id="name" required placeholder="Enter your name">
                 </div>
 
-                <div class="schedule-card">
-                    <div class="schedule-day">Wednesday</div>
-                    <div class="schedule-item">
-                        <h3>Bible Study</h3>
-                        <div class="time">6:00 PM - 7:00 PM</div>
-                        <div class="location">Deep dive into Scripture and prayer</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Locations Section -->
-    <section id="locations" class="locations">
-        <div class="container">
-            <h2>Our Locations</h2>
-            <div class="locations-grid">
-                <div class="location-card">
-                    <h3>Council Bluffs, IA</h3>
-                    <p><strong>Sunday Services</strong></p>
-                    <p>
-                        16 Bennett Ave<br>
-                        Council Bluffs, IA 51503<br>
-                        <strong>Time:</strong> 9:00 AM - 11:00 AM
-                    </p>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" required placeholder="your@email.com">
                 </div>
 
-                <div class="location-card">
-                    <h3>Omaha, NE</h3>
-                    <p><strong>Wednesday Bible Study</strong></p>
-                    <p>
-                        Sozo Coffee House<br>
-                        1314 Jones Street<br>
-                        Omaha, NE 68102<br>
-                        <strong>Time:</strong> 6:00 PM - 7:00 PM
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Prayer Request Section -->
-    <section id="prayer" class="prayer-section">
-        <div class="container">
-            <h2>Prayer Requests</h2>
-            <p class="section-intro">Submit your prayer request and let our community lift you up in prayer. We believe in the power of prayer!</p>
-            
-            <div class="prayer-container">
-                <form action="https://formspree.io/f/xbdpavwb" method="POST" class="prayer-form" id="prayerForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" id="name" required placeholder="Enter your name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" required placeholder="your@email.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="prayer_request">Your Prayer Request</label>
-                        <textarea name="prayer_request" id="prayer_request" rows="6" required placeholder="Please share what you would like us to pray about..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="category">Prayer Category (Optional)</label>
-                        <select name="category" id="category">
-                            <option value="">Select a category...</option>
-                            <option value="health">Health & Healing</option>
-                            <option value="family">Family</option>
-                            <option value="work">Work & Career</option>
-                            <option value="spiritual">Spiritual Growth</option>
-                            <option value="financial">Financial</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Submit Prayer Request</button>
-                    <p class="form-note">Your prayer request will be shared with our prayer team and community.</p>
-                </form>
-
-                <div id="prayerSuccess" class="success-message" style="display:none;">
-                    <h3>✓ Thank you!</h3>
-                    <p>Your prayer request has been submitted. We will be praying for you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Donation Section -->
-    <section id="donate" class="donation-section">
-        <div class="container">
-            <h2>Support Our Ministry</h2>
-            <p class="section-intro">Your generosity helps us continue spreading the Gospel and serving our community. Thank you for your support!</p>
-            
-            <div class="donation-container">
-                <div class="donation-options">
-                    <div class="donation-card">
-                        <h3>One-Time Donation</h3>
-                        <p>Make a single contribution to support our ministry.</p>
-                        <a href="https://www.paypal.com/donate" target="_blank" class="btn-donate btn-donate-primary">Donate Now via PayPal</a>
-                    </div>
-
-                    <div class="donation-card">
-                        <h3>Monthly Support</h3>
-                        <p>Become a partner in ministry with a recurring monthly gift.</p>
-                        <a href="https://www.paypal.com/donate" target="_blank" class="btn-donate btn-donate-secondary">Set Up Monthly Gift</a>
-                    </div>
-
-                    <div class="donation-card">
-                        <h3>Other Ways to Give</h3>
-                        <p>Contact us for other giving options including direct bank transfer or checks.</p>
-                        <a href="mailto:joinbodyofchrist@gmail.com" class="btn-donate btn-donate-secondary">Contact Us</a>
-                    </div>
+                <div class="form-group">
+                    <label for="message">Your Prayer Request</label>
+                    <textarea name="message" id="message" rows="6" required placeholder="Please share what you would like us to pray about..."></textarea>
                 </div>
 
-                <div class="donation-info">
-                    <h3>Where Your Donation Goes</h3>
-                    <ul>
-                        <li>🙏 Worship & Ministry Programs</li>
-                        <li>📖 Bible Study Materials & Resources</li>
-                        <li>🏠 Facility Maintenance & Operations</li>
-                        <li>🤝 Community Outreach & Service</li>
-                        <li>👥 Staff & Pastoral Support</li>
-                    </ul>
-                    <p class="tax-note">Body of Christ Ministries is a faith-based organization. Donations are tax-deductible to the extent allowed by law.</p>
+                <div class="form-group">
+                    <label for="category">Prayer Category (Optional)</label>
+                    <select name="category" id="category">
+                        <option value="">Select a category...</option>
+                        <option value="health">Health & Healing</option>
+                        <option value="family">Family</option>
+                        <option value="work">Work & Career</option>
+                        <option value="spiritual">Spiritual Growth</option>
+                        <option value="financial">Financial</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
-            </div>
+
+                <button type="submit" class="btn-submit">Submit Prayer Request</button>
+                <p class="form-note">Your prayer request will be shared with our prayer team and community.</p>
+            </form>
         </div>
-    </section>
-
-    <!-- Connect Section -->
-    <section id="connect" class="connect">
-        <div class="container">
-            <h2>Connect With Us</h2>
-            <div class="connect-options">
-                <a href="https://www.facebook.com/profile.php?id=61582607797300" target="_blank" class="social-link">
-                    📘 Follow on Facebook
-                </a>
-                <a href="mailto:joinbodyofchrist@gmail.com" class="social-link">
-                    ✉️ Send us an Email
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p>Have questions or want to learn more about our ministry?</p>
-                <p><strong>Email:</strong> <a href="mailto:joinbodyofchrist@gmail.com">joinbodyofchrist@gmail.com</a></p>
-                <p><strong>Visit us on Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61582607797300" target="_blank">Body of Christ Ministries</a></p>
-                <p style="margin-top: 30px; font-style: italic; color: #d4af37;">
-                    "Therefore, if anyone is in Christ, he is a new creation; old things have passed away; behold, all things have become new." - 2 Corinthians 5:17
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Body of Christ Ministries. All rights reserved.</p>
-            <p>Jesus Christ Preaching Church</p>
-        </div>
-    </footer>
-
-    <script>
-        // Handle form submission with Formspree
-        document.getElementById('prayerForm').addEventListener('submit', function(e) {
-            // Formspree will handle the submission
-            // Show success message after submission
-            setTimeout(function() {
-                document.getElementById('prayerForm').style.display = 'none';
-                document.getElementById('prayerSuccess').style.display = 'block';
-                
-                // Reset after 5 seconds
-                setTimeout(() => {
-                    document.getElementById('prayerForm').reset();
-                    document.getElementById('prayerForm').style.display = 'block';
-                    document.getElementById('prayerSuccess').style.display = 'none';
-                }, 5000);
-            }, 1000);
-        });
-    </script>
-
-</body>
-</html>
+    </div>
+</section>
