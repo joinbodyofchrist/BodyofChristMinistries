@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Body of Christ Ministries</title>
+  <meta name="description" content="Upcoming events, services, and gatherings at Body of Christ Ministries.">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Events | Body of Christ Ministries">
+  <meta property="og:description" content="Upcoming events, services, and gatherings at Body of Christ Ministries.">
+  <meta property="og:url"         content="https://joinbodyofchrist.github.io/BodyofChristMinistries/events.html">
+  <meta property="og:image"       content="https://joinbodyofchrist.github.io/BodyofChristMinistries/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo" aria-label="Body of Christ Ministries — Home">
+        <img src="logo.jpg" alt="" width="40" height="40">
+        <span class="site-logo-text">Body of Christ Ministries</span>
+      </a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="faith.html">Statement of Faith</a>
+        <a href="events.html">Events</a>
+        <a href="give.html">Give</a>
+        <a href="prayer.html">Prayer Request</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="accent-strip" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <h1>Events &amp; Gatherings</h1>
+        <p>Join us for worship services, Bible study, and community events.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-lead">
+          All are welcome! Check back often — events are updated regularly.
+          To add or change events, edit <code>data/events.json</code>.
+        </p>
+
+        <!-- Events are loaded dynamically from data/events.json -->
+        <div id="events-list" class="events-list" aria-live="polite" aria-busy="true">
+          <p class="no-events">Loading events…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="facebook-cta" aria-labelledby="fb-events-heading">
+      <div class="container">
+        <h2 id="fb-events-heading">Never Miss an Event</h2>
+        <p>Follow us on Facebook for the latest event announcements and ministry updates!</p>
+        <a href="https://www.facebook.com/profile.php?id=61582607797300"
+           class="btn btn-facebook"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Visit Body of Christ Ministries on Facebook (opens in new tab)">
+          <span aria-hidden="true">📘</span>
+          Follow Us on Facebook
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo" aria-label="Body of Christ Ministries — Home">
+            <img src="logo.jpg" alt="" width="36" height="36">
+            <span class="site-logo-text" style="font-size:.95rem">Body of Christ Ministries</span>
+          </a>
+          <p>Serving our community with faith, compassion, and dedication.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faith.html">Statement of Faith</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="give.html">Give</a></li>
+            <li><a href="prayer.html">Prayer Request</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <ul class="social-list">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61582607797300"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Facebook (opens in new tab)">
+                📘 Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> Body of Christ Ministries. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

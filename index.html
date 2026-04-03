@@ -1,124 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Body of Christ Ministries</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body of Christ Ministries</title>
+  <meta name="description" content="Body of Christ Ministries — a community of faith dedicated to worship, outreach, and serving one another in love.">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Body of Christ Ministries">
+  <meta property="og:description" content="A community of faith dedicated to worship, outreach, and serving one another in love.">
+  <meta property="og:url"         content="https://joinbodyofchrist.github.io/BodyofChristMinistries/">
+  <meta property="og:image"       content="https://joinbodyofchrist.github.io/BodyofChristMinistries/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header class="header">
-        <div class="container">
-            <h1>Body of Christ Ministries</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#mission">Mission</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#prayer">Prayer Requests</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Welcome to Body of Christ Ministries</h2>
-                <p>Serving our community with faith, compassion, and dedication</p>
-                <a href="#prayer" class="cta-button">Submit Prayer Request</a>
-            </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo" aria-label="Body of Christ Ministries — Home">
+        <img src="logo.jpg" alt="" width="40" height="40">
+        <span class="site-logo-text">Body of Christ Ministries</span>
+      </a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="faith.html">Statement of Faith</a>
+        <a href="events.html">Events</a>
+        <a href="give.html">Give</a>
+        <a href="prayer.html">Prayer Request</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="accent-strip" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <section class="hero">
+      <div class="container">
+        <span class="hero-eyebrow">Welcome</span>
+        <h1>Body of Christ Ministries</h1>
+        <p class="hero-subtitle">A community of faith dedicated to worship, outreach, and serving one another in love.</p>
+        <p class="hero-verse">"For we are all one body in Christ, and individually members one of another." — Romans 12:5</p>
+        <div class="hero-actions">
+          <a href="prayer.html" class="btn btn-primary">Submit a Prayer Request</a>
+          <a href="give.html"   class="btn btn-white">Support Our Ministry</a>
         </div>
+      </div>
     </section>
 
-    <!-- Mission Section -->
-    <section id="mission" class="mission">
-        <div class="container">
-            <h2>Our Mission</h2>
-            <p>We are dedicated to spreading the gospel and serving those in need through various ministry programs and community outreach initiatives.</p>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Mission</h2>
+        <p class="section-lead">We are called to spread the Gospel, build up the body of believers, and serve our community with compassion and purpose.</p>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">🙏</div>
+            <h3>Worship &amp; Prayer</h3>
+            <p>Gathering together to worship God and intercede for one another through fervent, heartfelt prayer.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">📖</div>
+            <h3>Bible Study</h3>
+            <p>Deepening our knowledge of God's Word through weekly study and discipleship groups open to all.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">🤝</div>
+            <h3>Community Outreach</h3>
+            <p>Reaching our neighbors and community with practical acts of service and the love of Christ.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">✨</div>
+            <h3>Youth Programs</h3>
+            <p>Equipping the next generation with a strong foundation of faith, character, and purpose.</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Worship & Prayer</h3>
-                    <p>Join us for meaningful worship experiences and prayer gatherings</p>
-                </div>
-                <div class="service-card">
-                    <h3>Community Outreach</h3>
-                    <p>We serve our community through various charitable and support programs</p>
-                </div>
-                <div class="service-card">
-                    <h3>Bible Study</h3>
-                    <p>Deepen your faith through our comprehensive Bible study groups</p>
-                </div>
-                <div class="service-card">
-                    <h3>Youth Programs</h3>
-                    <p>Engaging programs designed for youth spiritual growth and development</p>
-                </div>
-            </div>
+    <!-- Service Times -->
+    <section class="section section--alt" aria-labelledby="hours-heading">
+      <div class="container">
+        <h2 class="section-title" id="hours-heading">Join Us</h2>
+        <p class="section-lead">All are welcome — come as you are. We'd love to see you!</p>
+        <div class="cards-grid">
+
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">☀️</div>
+            <h3>Sunday</h3>
+            <ul style="list-style:none;padding:0;margin:0 0 .75rem;color:var(--color-text);line-height:2.1;">
+              <li><strong>9:00 AM</strong> — Bible Study &amp; Coffee</li>
+              <li><strong>10:00 AM</strong> — Church Service</li>
+            </ul>
+            <p style="font-size:.875rem;color:var(--color-muted);">
+              <a href="https://maps.google.com/?q=16+Bennett+Ave,+Council+Bluffs,+IA+51503"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Directions to 16 Bennett Ave, Council Bluffs (opens in new tab)">
+                📍 16 Bennett Ave<br>Council Bluffs, IA 51503
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">☕</div>
+            <h3>Wednesday</h3>
+            <ul style="list-style:none;padding:0;margin:0 0 .75rem;color:var(--color-text);line-height:2.1;">
+              <li><strong>6:00 – 7:00 PM</strong> — Night Bible Study</li>
+            </ul>
+            <p style="font-size:.875rem;color:var(--color-muted);">
+              Sozo Coffee House<br>
+              <a href="https://maps.google.com/?q=1314+Jones+Street,+Omaha,+NE+68102"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Directions to Sozo Coffee House, Omaha (opens in new tab)">
+                📍 1314 Jones Street<br>Omaha, NE 68102
+              </a>
+            </p>
+          </div>
+
         </div>
+        <p style="margin-top:1.5rem;">
+          <a href="contact.html" class="btn btn-outline">View All Contact &amp; Location Info</a>
+        </p>
+      </div>
     </section>
 
-    <!-- Prayer Request Section -->
-    <section id="prayer" class="prayer-section">
-        <div class="container">
-            <h2>Prayer Requests</h2>
-            <p>Share your prayer requests with our community. We believe in the power of prayer and intercession.</p>
-            <form class="prayer-form" action="https://formspree.io/f/mwkajqza" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="prayer-request">Prayer Request:</label>
-                    <textarea id="prayer-request" name="prayer-request" rows="6" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="category">Category:</label>
-                    <select id="category" name="category">
-                        <option value="general">General</option>
-                        <option value="healing">Healing</option>
-                        <option value="guidance">Guidance</option>
-                        <option value="family">Family</option>
-                        <option value="financial">Financial</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="cta-button">Submit Prayer Request</button>
-            </form>
-        </div>
+    <section class="facebook-cta" aria-labelledby="fb-heading">
+      <div class="container">
+        <h2 id="fb-heading">Connect With Us on Facebook</h2>
+        <p>Stay up to date with announcements, event reminders, encouragement, and more — follow our Facebook page!</p>
+        <a href="https://www.facebook.com/profile.php?id=61582607797300"
+           class="btn btn-facebook"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Visit Body of Christ Ministries on Facebook (opens in new tab)">
+          <span aria-hidden="true">&#x1F4D8;</span>
+          Follow Us on Facebook
+        </a>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>We'd love to hear from you. Reach out to learn more about our ministries.</p>
-            <a href="mailto:info@bodyofchristministries.com" class="cta-button">Contact Us</a>
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">Explore Our Ministry</h2>
+        <p class="section-lead">Find out what we believe, what's happening, how to give, and how to reach us.</p>
+        <div class="cards-grid">
+          <a href="faith.html" class="card" style="text-decoration:none;color:inherit;">
+            <div class="card-icon" aria-hidden="true">📜</div>
+            <h3>Statement of Faith</h3>
+            <p>Learn the core beliefs that ground everything we do as a ministry.</p>
+          </a>
+          <a href="events.html" class="card" style="text-decoration:none;color:inherit;">
+            <div class="card-icon" aria-hidden="true">📅</div>
+            <h3>Events</h3>
+            <p>Browse our upcoming services, gatherings, and special events.</p>
+          </a>
+          <a href="give.html" class="card" style="text-decoration:none;color:inherit;">
+            <div class="card-icon" aria-hidden="true">💛</div>
+            <h3>Give / Donate</h3>
+            <p>Support the work of this ministry with a generous, cheerful gift.</p>
+          </a>
+          <a href="contact.html" class="card" style="text-decoration:none;color:inherit;">
+            <div class="card-icon" aria-hidden="true">✉️</div>
+            <h3>Contact Us</h3>
+            <p>Get in touch — we'd love to hear from you and answer your questions.</p>
+          </a>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Body of Christ Ministries. All rights reserved.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo" aria-label="Body of Christ Ministries — Home">
+            <img src="logo.jpg" alt="" width="36" height="36">
+            <span class="site-logo-text" style="font-size:.95rem">Body of Christ Ministries</span>
+          </a>
+          <p>Serving our community with faith, compassion, and dedication.</p>
         </div>
-    </footer>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faith.html">Statement of Faith</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="give.html">Give</a></li>
+            <li><a href="prayer.html">Prayer Request</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <ul class="social-list">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61582607797300"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Facebook (opens in new tab)">
+                📘 Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> Body of Christ Ministries. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

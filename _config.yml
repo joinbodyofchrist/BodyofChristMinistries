@@ -1,0 +1,13 @@
+# Jekyll configuration for GitHub Pages
+# Plain HTML/CSS/JS site — no Jekyll theme or processing needed.
+# This file tells GitHub Pages to treat the repo as a static site.
+
+# Use the "null" theme to avoid Jekyll trying to apply a theme to plain HTML.
+theme: null
+
+# GitHub Pages will serve index.html from the root.
+# No build step required.
+
+# Site URL (update after enabling Pages in repo Settings)
+url: "https://joinbodyofchrist.github.io"
+baseurl: "/BodyofChristMinistries"
