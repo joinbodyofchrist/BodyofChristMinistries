@@ -308,6 +308,67 @@ body {
     line-height: 1.7;
 }
 
+/* Children's Ministries Section */
+.childrens {
+    padding: 80px 20px;
+    background-color: var(--dark-gray);
+}
+
+.childrens h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.childrens-lead {
+    text-align: center;
+    font-size: 17px;
+    color: #cccccc;
+    line-height: 1.75;
+    max-width: 720px;
+    margin: 0 auto 50px;
+}
+
+.childrens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 30px;
+}
+
+.childrens-card {
+    background-color: var(--black);
+    padding: 36px 32px;
+    border-radius: 8px;
+    border-top: 4px solid var(--gold);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.childrens-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.childrens-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    color: var(--gold);
+}
+
+.childrens-card h3 {
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.childrens-card p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.7;
+}
+
 /* Locations Section */
 .locations {
     padding: 80px 20px;
