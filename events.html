@@ -54,63 +54,50 @@
     </div>
   </footer>
 
+  <script src="data/events.js"></script>
   <script>
-    // Format date: "2026-04-05" → "Sunday, April 5, 2026"
     function formatDate(dateStr) {
       const [year, month, day] = dateStr.split('-').map(Number);
-      const date = new Date(year, month - 1, day);
-      return date.toLocaleDateString('en-US', {
+      return new Date(year, month - 1, day).toLocaleDateString('en-US', {
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
       });
     }
 
-    // Check if event is in the past
     function isPast(dateStr) {
       const [year, month, day] = dateStr.split('-').map(Number);
-      const eventDate = new Date(year, month - 1, day);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
-      return eventDate < today;
+      return new Date(year, month - 1, day) < today;
     }
 
-    fetch('data/events.json')
-      .then(res => res.json())
-      .then(events => {
-        const grid = document.getElementById('events-grid');
+    const grid = document.getElementById('events-grid');
 
-        // Sort by date
-        events.sort((a, b) => a.date.localeCompare(b.date));
-
-        if (events.length === 0) {
-          grid.innerHTML = '<p class="events-empty">No upcoming events at this time. Check back soon!</p>';
-          return;
-        }
-
-        grid.innerHTML = events.map(event => {
-          const past = isPast(event.date);
-          return `
-            <div class="event-card${past ? ' event-card--past' : ''}">
-              <div class="event-date-badge">
-                <span class="event-month">${new Date(event.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short' })}</span>
-                <span class="event-day">${new Date(event.date + 'T00:00:00').getDate()}</span>
-              </div>
-              <div class="event-details">
-                <h3>${event.title}${past ? ' <span class="event-past-label">Past</span>' : ''}</h3>
-                <p class="event-meta">
-                  <span>&#128197; ${formatDate(event.date)}</span>
-                  <span>&#128336; ${event.time}</span>
-                </p>
-                <p class="event-location">&#128205; ${event.location}</p>
-                ${event.description ? `<p class="event-desc">${event.description}</p>` : ''}
-              </div>
+    if (!EVENTS || EVENTS.length === 0) {
+      grid.innerHTML = '<p class="events-empty">No upcoming events at this time. Check back soon!</p>';
+    } else {
+      EVENTS.sort((a, b) => a.date.localeCompare(b.date));
+      grid.innerHTML = EVENTS.map(event => {
+        const past = isPast(event.date);
+        const d = new Date(event.date + 'T00:00:00');
+        return `
+          <div class="event-card${past ? ' event-card--past' : ''}">
+            <div class="event-date-badge">
+              <span class="event-month">${d.toLocaleDateString('en-US', { month: 'short' })}</span>
+              <span class="event-day">${d.getDate()}</span>
             </div>
-          `;
-        }).join('');
-      })
-      .catch(() => {
-        document.getElementById('events-grid').innerHTML =
-          '<p class="events-empty">Unable to load events. Please try again later.</p>';
-      });
+            <div class="event-details">
+              <h3>${event.title}${past ? ' <span class="event-past-label">Past</span>' : ''}</h3>
+              <p class="event-meta">
+                <span>&#128197; ${formatDate(event.date)}</span>
+                <span>&#128336; ${event.time}</span>
+              </p>
+              <p class="event-location">&#128205; ${event.location}</p>
+              ${event.description ? `<p class="event-desc">${event.description}</p>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
   </script>
 
 </body>
