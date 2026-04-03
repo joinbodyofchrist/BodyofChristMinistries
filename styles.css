@@ -48,8 +48,8 @@ body {
 }
 
 .logo-img {
-    max-width: 200px;
-    height: auto;
+    height: 55px;
+    width: auto;
 }
 
 .nav {
@@ -119,7 +119,7 @@ body {
 
 .schedule-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 30px;
 }
 
@@ -190,7 +190,7 @@ body {
 
 .locations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: 30px;
 }
 
@@ -319,15 +319,25 @@ body {
     font-weight: 600;
 }
 
-/* Mobile Responsive */
+/* Responsive — Tablet & below (≤768px) */
 @media (max-width: 768px) {
     .header .container {
         flex-direction: column;
         align-items: center;
     }
 
+    .logo {
+        min-width: 0;
+        text-align: center;
+    }
+
     .nav {
         justify-content: center;
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 60px 20px;
     }
 
     .hero h1 {
@@ -342,6 +352,13 @@ body {
         font-size: 16px;
     }
 
+    .schedule,
+    .locations,
+    .connect,
+    .contact {
+        padding: 60px 20px;
+    }
+
     .schedule h2,
     .locations h2,
     .connect h2,
@@ -349,7 +366,10 @@ body {
         font-size: 32px;
     }
 
-    .schedule-grid,
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+
     .locations-grid {
         grid-template-columns: 1fr;
     }
@@ -362,5 +382,80 @@ body {
     .social-link {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+/* Responsive — Small phones (≤480px) */
+@media (max-width: 480px) {
+    .logo-img {
+        height: 40px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 40px 16px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    .tagline {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+
+    .welcome-message {
+        font-size: 15px;
+    }
+
+    .schedule,
+    .locations,
+    .connect,
+    .contact {
+        padding: 40px 16px;
+    }
+
+    .schedule h2,
+    .locations h2,
+    .connect h2,
+    .contact h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .schedule-card,
+    .location-card {
+        padding: 24px 20px;
+    }
+
+    .schedule-day {
+        font-size: 22px;
+    }
+
+    .schedule-item h3 {
+        font-size: 17px;
+    }
+
+    .location-card h3 {
+        font-size: 20px;
+    }
+
+    .social-link {
+        padding: 12px 24px;
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .contact-info {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 28px 16px;
     }
 }
