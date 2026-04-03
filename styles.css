@@ -1,366 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --gold: #d4af37;
-    --black: #000000;
-    --dark-gray: #1a1a1a;
-    --text-white: #ffffff;
-}
-
-body {
-    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--black);
-    color: var(--text-white);
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header & Navigation */
 .header {
-    background-color: var(--dark-gray);
-    padding: 20px 0;
-    border-bottom: 3px solid var(--gold);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: black;
+    color: gold;
+    padding: 20px;
+    text-align: center;
 }
 
-.header .container {
+nav {
+    background-color: gold;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-around;
+    padding: 15px;
 }
 
-.logo {
-    flex: 1;
-    min-width: 200px;
-}
-
-.logo-img {
-    max-width: 200px;
-    height: auto;
-}
-
-.nav {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.nav a {
-    color: var(--gold);
+nav a {
     text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
+    color: black;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
 }
 
-.nav a:hover {
-    color: var(--text-white);
-    border-bottom: 2px solid var(--gold);
+nav a:hover {
+    background-color: black;
+    color: gold;
 }
 
-/* Hero Section */
 .hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
-}
-
-.hero h1 {
-    font-size: 48px;
-    color: var(--gold);
-    margin-bottom: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.tagline {
-    font-size: 24px;
-    color: var(--gold);
-    margin-bottom: 30px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-.welcome-message {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-    color: var(--text-white);
-}
-
-/* Schedule Section */
-.schedule {
-    padding: 80px 20px;
-    background-color: var(--dark-gray);
-}
-
-.schedule h2 {
-    text-align: center;
-    font-size: 42px;
-    color: var(--gold);
-    margin-bottom: 50px;
-    letter-spacing: 1px;
-}
-
-.schedule-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-}
-
-.schedule-card {
-    background-color: var(--black);
-    padding: 40px;
-    border-left: 4px solid var(--gold);
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.schedule-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-}
-
-.schedule-day {
-    font-size: 28px;
-    color: var(--gold);
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.schedule-item {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-.schedule-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.schedule-item h3 {
-    font-size: 20px;
-    color: var(--text-white);
-    margin-bottom: 8px;
-}
-
-.schedule-item .time {
-    font-size: 16px;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.schedule-item .location {
-    font-size: 14px;
-    color: #cccccc;
-}
-
-/* Locations Section */
-.locations {
-    padding: 80px 20px;
-    background-color: var(--black);
-}
-
-.locations h2 {
-    text-align: center;
-    font-size: 42px;
-    color: var(--gold);
-    margin-bottom: 50px;
-    letter-spacing: 1px;
-}
-
-.locations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-}
-
-.location-card {
-    background-color: var(--dark-gray);
-    padding: 40px;
-    border-radius: 8px;
-    border-top: 4px solid var(--gold);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.location-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-}
-
-.location-card h3 {
-    font-size: 24px;
-    color: var(--gold);
-    margin-bottom: 20px;
-}
-
-.location-card p {
-    font-size: 16px;
-    margin-bottom: 12px;
-    line-height: 1.6;
-}
-
-.location-card strong {
-    color: var(--gold);
-}
-
-/* Connect Section */
-.connect {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
-    text-align: center;
-}
-
-.connect h2 {
-    font-size: 42px;
-    color: var(--gold);
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-}
-
-.connect-options {
+    background-image: url('hero-image.jpg');
+    height: 400px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    color: gold;
 }
 
-.social-link {
-    display: inline-block;
-    padding: 15px 40px;
-    border: 2px solid var(--gold);
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: 600;
+.schedule-card, .location-card, .donation-card {
+    background-color: black;
+    border: 1px solid gold;
     border-radius: 5px;
-    transition: all 0.3s ease;
-    font-size: 16px;
+    padding: 20px;
+    margin: 10px;
 }
 
-.social-link:hover {
-    background-color: var(--gold);
-    color: var(--black);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+.schedule-card h3, .location-card h3, .donation-card h3 {
+    color: gold;
 }
 
-/* Contact Section */
-.contact {
-    padding: 80px 20px;
-    background-color: var(--dark-gray);
+.prayer-request-form {
+    background-color: black;
+    padding: 20px;
+    border: 1px solid gold;
+    color: gold;
 }
 
-.contact h2 {
-    text-align: center;
-    font-size: 42px;
-    color: var(--gold);
-    margin-bottom: 40px;
-    letter-spacing: 1px;
+.prayer-request-form input,
+.prayer-request-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid gold;
 }
 
-.contact-info {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 18px;
+.donation-button {
+    background-color: gold;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.contact-info p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-.contact-info a {
-    color: var(--gold);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-    color: var(--text-white);
-}
-
-/* Footer */
-.footer {
-    background-color: var(--black);
-    border-top: 3px solid var(--gold);
-    padding: 40px 20px;
+.connect-section, .contact-section, .footer {
+    background-color: black;
+    color: gold;
+    padding: 20px;
     text-align: center;
 }
 
-.footer p {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.footer p:last-child {
-    margin-bottom: 0;
-    color: var(--gold);
-    font-weight: 600;
-}
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
-    .header .container {
+    nav {
         flex-direction: column;
-        align-items: center;
     }
-
-    .nav {
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .tagline {
-        font-size: 20px;
-    }
-
-    .welcome-message {
-        font-size: 16px;
-    }
-
-    .schedule h2,
-    .locations h2,
-    .connect h2,
-    .contact h2 {
-        font-size: 32px;
-    }
-
-    .schedule-grid,
-    .locations-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .connect-options {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-link {
-        width: 100%;
-        max-width: 300px;
+    .hero {
+        height: 250px;
     }
 }
