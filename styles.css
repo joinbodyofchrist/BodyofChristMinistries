@@ -1,87 +1,777 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #d4af37;
+    --black: #000000;
+    --dark-gray: #1a1a1a;
+    --text-white: #ffffff;
+    --light-gray: #2a2a2a;
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--black);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
 .header {
-    background-color: black;
-    color: gold;
-    padding: 20px;
-    text-align: center;
+    background-color: var(--black);
+    padding: 20px 0;
+    border-bottom: 2px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
 }
 
-nav {
-    background-color: gold;
+.header .container {
     display: flex;
-    justify-content: space-around;
-    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-nav a {
+.logo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--text-white);
     text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-nav a:hover {
-    background-color: black;
-    color: gold;
+.nav a:hover {
+    color: var(--gold);
 }
 
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
 .hero {
-    background-image: url('hero-image.jpg');
-    height: 400px;
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(0, 0, 0, 1) 100%);
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: gold;
 }
 
-.schedule-card, .location-card, .donation-card {
-    background-color: black;
-    border: 1px solid gold;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
+.hero .container {
+    animation: fadeInUp 0.8s ease;
 }
 
-.schedule-card h3, .location-card h3, .donation-card h3 {
-    color: gold;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.prayer-request-form {
-    background-color: black;
-    padding: 20px;
-    border: 1px solid gold;
-    color: gold;
+.hero h1 {
+    font-size: 56px;
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.prayer-request-form input,
-.prayer-request-form textarea {
+.tagline {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.welcome-message {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #ddd;
+    font-weight: 300;
+}
+
+/* Schedule Section */
+.schedule {
+    padding: 100px 20px;
+    background-color: var(--black);
+}
+
+.schedule h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.schedule-card {
+    background: linear-gradient(135deg, var(--light-gray) 0%, rgba(42, 42, 42, 0.5) 100%);
+    padding: 40px;
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.schedule-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+    background: linear-gradient(135deg, rgba(42, 42, 42, 0.8) 0%, rgba(42, 42, 42, 0.4) 100%);
+}
+
+.schedule-day {
+    font-size: 24px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.schedule-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.schedule-item h3 {
+    font-size: 18px;
+    color: var(--text-white);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.schedule-item .time {
+    font-size: 15px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.schedule-item .location {
+    font-size: 13px;
+    color: #bbb;
+    font-weight: 300;
+}
+
+/* Locations Section */
+.locations {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, var(--black) 100%);
+}
+
+.locations h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.location-card {
+    background: linear-gradient(135deg, var(--light-gray) 0%, rgba(42, 42, 42, 0.5) 100%);
+    padding: 40px;
+    border-radius: 10px;
+    border-top: 4px solid var(--gold);
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
+
+.location-card h3 {
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.location-card p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #ddd;
+    font-weight: 300;
+}
+
+.location-card strong {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Prayer Request Section */
+.prayer-section {
+    padding: 100px 20px;
+    background-color: var(--black);
+}
+
+.prayer-section h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: #bbb;
+    font-weight: 300;
+}
+
+.prayer-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.prayer-form {
+    background: linear-gradient(135deg, var(--light-gray) 0%, rgba(42, 42, 42, 0.5) 100%);
+    padding: 50px;
+    border-radius: 10px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: 1px solid gold;
+    padding: 14px 16px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--text-white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
-.donation-button {
-    background-color: gold;
-    color: black;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #777;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-group select {
     cursor: pointer;
 }
 
-.connect-section, .contact-section, .footer {
-    background-color: black;
-    color: gold;
-    padding: 20px;
+.form-group select option {
+    background-color: var(--dark-gray);
+    color: var(--text-white);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--gold) 0%, #e5c158 100%);
+    color: var(--black);
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+}
+
+.form-note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.success-message {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(76, 175, 80, 0.05) 100%);
+    border-left: 4px solid #4CAF50;
+    padding: 50px 40px;
+    border-radius: 10px;
+    text-align: center;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-message h3 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.success-message p {
+    font-size: 15px;
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* Donation Section */
+.donation-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, var(--black) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.donation-section h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.donation-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.donation-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.donation-card {
+    background: linear-gradient(135deg, var(--light-gray) 0%, rgba(42, 42, 42, 0.5) 100%);
+    padding: 35px;
+    border-radius: 10px;
+    border-top: 4px solid var(--gold);
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.donation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
+
+.donation-card h3 {
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.donation-card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.btn-donate {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.btn-donate-primary {
+    background: linear-gradient(135deg, var(--gold) 0%, #e5c158 100%);
+    color: var(--black);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+.btn-donate-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-donate-secondary {
+    background-color: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+}
+
+.btn-donate-secondary:hover {
+    background-color: var(--gold);
+    color: var(--black);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+.donation-info {
+    background: linear-gradient(135deg, var(--light-gray) 0%, rgba(42, 42, 42, 0.5) 100%);
+    padding: 40px;
+    border-radius: 10px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.donation-info h3 {
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.donation-info ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.donation-info li {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    padding-left: 10px;
+    font-weight: 300;
+}
+
+.donation-info li:before {
+    content: "→ ";
+    color: var(--gold);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.tax-note {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    font-weight: 300;
+}
+
+/* Connect Section */
+.connect {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, var(--black) 100%);
     text-align: center;
 }
 
+.connect h2 {
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.connect-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 16px 40px;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, var(--gold) 0%, #e5c158 100%);
+    color: var(--black);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    background-color: var(--black);
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.contact-info {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+    color: #ddd;
+    font-weight: 300;
+}
+
+.contact-info a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    color: #e5c158;
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--black);
+    border-top: 2px solid var(--gold);
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 15px rgba(212, 175, 55, 0.1);
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.footer p:last-child {
+    margin-bottom: 0;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    nav {
+    .header .container {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
+
+    .nav {
+        justify-content: center;
+        gap: 20px;
+    }
+
     .hero {
-        height: 250px;
+        padding: 80px 20px;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .welcome-message {
+        font-size: 14px;
+    }
+
+    .schedule h2,
+    .locations h2,
+    .connect h2,
+    .contact h2,
+    .prayer-section h2,
+    .donation-section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .schedule-grid,
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .connect-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-link {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .prayer-form {
+        padding: 30px;
+    }
+
+    .donation-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .donation-options {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-card {
+        padding: 25px;
+    }
+
+    .btn-donate {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    .donation-info {
+        padding: 25px;
     }
 }
