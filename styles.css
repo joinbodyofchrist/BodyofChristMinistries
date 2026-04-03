@@ -86,6 +86,24 @@ body {
     background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
+.hero-title {
+    margin-bottom: 10px;
+}
+
+.hero-cross {
+    height: 200px;
+    width: auto;
+    filter: invert(1) sepia(1) saturate(4) hue-rotate(5deg);
+    mix-blend-mode: screen;
+    opacity: 0.9;
+    display: block;
+    margin: 16px auto 24px;
+}
+
+.hero-title h1 {
+    margin-bottom: 0;
+}
+
 .hero h1 {
     font-size: 48px;
     color: var(--gold);
