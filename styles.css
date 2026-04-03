@@ -220,6 +220,38 @@ body {
     color: #cccccc;
 }
 
+/* Beliefs Section */
+.beliefs {
+    padding: 80px 20px;
+    background-color: var(--black);
+}
+
+.beliefs h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.beliefs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 780px;
+}
+
+.beliefs-list li {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-white);
+    padding: 18px 20px 18px 28px;
+    border-left: 4px solid var(--gold);
+    margin-bottom: 16px;
+    background-color: var(--dark-gray);
+    border-radius: 0 8px 8px 0;
+}
+
 /* Locations Section */
 .locations {
     padding: 80px 20px;
