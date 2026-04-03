@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Sunday Morning Worship",
+    "date": "2026-04-05",
+    "time": "10:00 AM",
+    "location": "Main Sanctuary",
+    "description": "Join us for our weekly Sunday morning worship service. All are welcome!"
+  },
+  {
+    "title": "Wednesday Bible Study",
+    "date": "2026-04-08",
+    "time": "7:00 PM",
+    "location": "Fellowship Hall",
+    "description": "Midweek Bible study and prayer. Bring your Bible and a friend."
+  },
+  {
+    "title": "Community Outreach Day",
+    "date": "2026-04-18",
+    "time": "9:00 AM – 1:00 PM",
+    "location": "Community Center",
+    "description": "Join us as we serve our local community. Volunteers welcome — all ages!"
+  },
+  {
+    "title": "Youth Night",
+    "date": "2026-04-24",
+    "time": "6:30 PM",
+    "location": "Youth Room",
+    "description": "A special evening for youth — worship, games, and the Word of God."
+  },
+  {
+    "title": "Sunday Morning Worship",
+    "date": "2026-04-26",
+    "time": "10:00 AM",
+    "location": "Main Sanctuary",
+    "description": "Join us for our weekly Sunday morning worship service. All are welcome!"
+  },
+  {
+    "title": "Prayer & Intercession Night",
+    "date": "2026-05-01",
+    "time": "7:00 PM",
+    "location": "Main Sanctuary",
+    "description": "A dedicated evening of prayer for our community, nation, and the world."
+  }
+]

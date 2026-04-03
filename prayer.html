@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer Request | Body of Christ Ministries</title>
+  <meta name="description" content="Submit a prayer request to Body of Christ Ministries. We believe in the power of prayer and will stand with you in faith.">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Prayer Request | Body of Christ Ministries">
+  <meta property="og:description" content="Submit a prayer request — we believe in the power of prayer and will stand with you in faith.">
+  <meta property="og:url"         content="https://joinbodyofchrist.github.io/BodyofChristMinistries/prayer.html">
+  <meta property="og:image"       content="https://joinbodyofchrist.github.io/BodyofChristMinistries/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo" aria-label="Body of Christ Ministries — Home">
+        <img src="logo.jpg" alt="" width="40" height="40">
+        <span class="site-logo-text">Body of Christ Ministries</span>
+      </a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="faith.html">Statement of Faith</a>
+        <a href="events.html">Events</a>
+        <a href="give.html">Give</a>
+        <a href="prayer.html">Prayer Request</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="accent-strip" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <h1>Prayer Request</h1>
+        <p>"Do not be anxious about anything, but in every situation, by prayer and petition, present your requests to God." — Philippians 4:6</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Share Your Prayer Request</h2>
+        <p class="section-lead">
+          We are honored to pray with you. Share what's on your heart and our team will faithfully lift your request before the Lord.
+          All personal information is kept strictly confidential.
+        </p>
+
+        <!--
+          FORMSPREE ENDPOINT PLACEHOLDER
+          ─────────────────────────────────────────────────────────────────────────
+          To connect this form to Formspree:
+            1. Create a free account at https://formspree.io
+            2. Create a new form and copy your form endpoint ID (e.g. "mwpqabcd")
+            3. Replace "XXXXXXX" below with your actual Formspree form ID.
+               Example: action="https://formspree.io/f/mwpqabcd"
+          ─────────────────────────────────────────────────────────────────────────
+        -->
+        <form
+          id="prayer-form"
+          class="form-wrapper"
+          action="https://formspree.io/f/XXXXXXX"
+          method="POST"
+          novalidate
+          aria-label="Prayer request form"
+        >
+          <!-- Name (optional) -->
+          <div class="form-group">
+            <label for="pr-name">
+              Your Name
+              <span class="optional">(optional)</span>
+            </label>
+            <input
+              type="text"
+              id="pr-name"
+              name="name"
+              autocomplete="name"
+              placeholder="First name or anonymous"
+            >
+          </div>
+
+          <!-- Email (optional) -->
+          <div class="form-group">
+            <label for="pr-email">
+              Email Address
+              <span class="optional">(optional — for a follow-up response)</span>
+            </label>
+            <input
+              type="email"
+              id="pr-email"
+              name="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+            >
+          </div>
+
+          <!-- Phone (optional) -->
+          <div class="form-group">
+            <label for="pr-phone">
+              Phone Number
+              <span class="optional">(optional)</span>
+            </label>
+            <input
+              type="tel"
+              id="pr-phone"
+              name="phone"
+              autocomplete="tel"
+              placeholder="(555) 000-0000"
+            >
+          </div>
+
+          <!-- Prayer Request (required) -->
+          <div class="form-group">
+            <label for="prayer-message">
+              Prayer Request
+              <span class="form-required" aria-hidden="true">*</span>
+            </label>
+            <textarea
+              id="prayer-message"
+              name="prayer_request"
+              rows="6"
+              required
+              aria-required="true"
+              placeholder="Share what's on your heart…"
+            ></textarea>
+          </div>
+
+          <!-- Consent checkbox (optional) -->
+          <div class="form-group checkbox-group">
+            <input
+              type="checkbox"
+              id="pr-consent"
+              name="consent"
+              value="I agree that my prayer request may be shared with the prayer team."
+            >
+            <label for="pr-consent">
+              I understand that my prayer request may be shared with our prayer team for intercession purposes.
+            </label>
+          </div>
+
+          <!-- Spam prevention (hidden) -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem;">
+            🙏 Submit Prayer Request
+          </button>
+
+          <!-- Success message -->
+          <div id="form-success" class="form-message success" role="alert" aria-live="polite">
+            ✅ Thank you! Your prayer request has been received. We will be praying for you.
+          </div>
+
+          <!-- Error message -->
+          <div id="form-error" class="form-message error" role="alert" aria-live="polite"></div>
+        </form>
+
+        <p style="margin-top:1.5rem; color:var(--color-muted); font-size:0.875rem;">
+          <strong>Note:</strong> Fields marked <span style="color:var(--color-error);">*</span> are required.
+          Your information is kept confidential and will never be shared outside our prayer team.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo" aria-label="Body of Christ Ministries — Home">
+            <img src="logo.jpg" alt="" width="36" height="36">
+            <span class="site-logo-text" style="font-size:.95rem">Body of Christ Ministries</span>
+          </a>
+          <p>Serving our community with faith, compassion, and dedication.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faith.html">Statement of Faith</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="give.html">Give</a></li>
+            <li><a href="prayer.html">Prayer Request</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <ul class="social-list">
+            <!-- PLACEHOLDER: Replace href with your actual Facebook URL -->
+            <li>
+              <a href="https://www.facebook.com/PLACEHOLDER_FACEBOOK_PAGE"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Facebook (opens in new tab)">
+                📘 Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> Body of Christ Ministries. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
