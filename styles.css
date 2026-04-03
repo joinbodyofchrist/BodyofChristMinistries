@@ -324,6 +324,266 @@ body {
     font-weight: 600;
 }
 
+/* Events Page */
+.events-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.events-hero h1 {
+    font-size: 48px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.events-hero p {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.events-list {
+    padding: 60px 20px 80px;
+    background-color: var(--black);
+}
+
+.events-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.event-card {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    background-color: var(--dark-gray);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 28px 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
+}
+
+.event-card--past {
+    opacity: 0.5;
+    border-left-color: #555;
+}
+
+.event-date-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gold);
+    color: var(--black);
+    border-radius: 6px;
+    min-width: 60px;
+    padding: 10px 8px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.event-month {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-day {
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h3 {
+    font-size: 22px;
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.event-past-label {
+    font-size: 12px;
+    background-color: #444;
+    color: #aaa;
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.event-location {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.event-desc {
+    font-size: 15px;
+    color: #aaaaaa;
+    line-height: 1.7;
+}
+
+.events-loading,
+.events-empty {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 16px;
+    padding: 40px 0;
+}
+
+/* Events Page */
+.events-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.events-hero h1 {
+    font-size: 48px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.events-hero p {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.events-list {
+    padding: 60px 20px 80px;
+    background-color: var(--black);
+}
+
+.events-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.event-card {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    background-color: var(--dark-gray);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 28px 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
+}
+
+.event-card--past {
+    opacity: 0.5;
+    border-left-color: #555;
+}
+
+.event-date-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gold);
+    color: var(--black);
+    border-radius: 6px;
+    min-width: 60px;
+    padding: 10px 8px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.event-month {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-day {
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h3 {
+    font-size: 22px;
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.event-past-label {
+    font-size: 12px;
+    background-color: #444;
+    color: #aaa;
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.event-location {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.event-desc {
+    font-size: 15px;
+    color: #aaaaaa;
+    line-height: 1.7;
+}
+
+.events-loading,
+.events-empty {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 16px;
+    padding: 40px 0;
+}
+
 /* Prayer Request Section */
 .prayer {
     padding: 80px 20px;
