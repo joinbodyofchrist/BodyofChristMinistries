@@ -230,26 +230,82 @@ body {
     text-align: center;
     font-size: 42px;
     color: var(--gold);
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     letter-spacing: 1px;
 }
 
-.beliefs-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
+.belief-article {
     max-width: 780px;
+    margin: 0 auto 32px;
+    padding: 32px 36px;
+    background-color: var(--dark-gray);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 8px 8px 0;
 }
 
-.beliefs-list li {
+.belief-article h3 {
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.belief-article p {
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--text-white);
-    padding: 18px 20px 18px 28px;
+    margin: 0;
+}
+
+.belief-article p + ul {
+    margin-top: 12px;
+}
+
+.belief-gifts {
+    list-style: disc;
+    padding-left: 24px;
+    margin: 0;
+}
+
+.belief-gifts li {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+.belief-article--highlight {
+    background-color: rgba(212, 175, 55, 0.08);
+    border-left-color: var(--gold);
+}
+
+.belief-article--ruled {
+    border-top: 1px solid rgba(212, 175, 55, 0.35);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
     border-left: 4px solid var(--gold);
-    margin-bottom: 16px;
-    background-color: var(--dark-gray);
     border-radius: 0 8px 8px 0;
+}
+
+.belief-prayer {
+    max-width: 780px;
+    margin: 0 auto 80px;
+    padding: 36px;
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    padding-top: 48px;
+}
+
+.belief-prayer h3 {
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.belief-prayer p {
+    font-size: 18px;
+    color: #cccccc;
+    font-style: italic;
+    line-height: 1.7;
 }
 
 /* Locations Section */
