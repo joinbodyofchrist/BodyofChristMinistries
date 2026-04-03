@@ -108,6 +108,27 @@ body {
     color: var(--text-white);
 }
 
+.hero-verse {
+    margin: 30px auto 0;
+    max-width: 700px;
+    border-left: 3px solid var(--gold);
+    padding: 12px 20px;
+    font-style: italic;
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.hero-verse cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--gold);
+    font-size: 14px;
+}
+
 /* Schedule Section */
 .schedule {
     padding: 80px 20px;
