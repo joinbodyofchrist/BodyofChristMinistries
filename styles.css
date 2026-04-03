@@ -32,7 +32,7 @@ body {
 /* Header & Navigation */
 .header {
     background-color: var(--dark-gray);
-    padding: 10px 0;
+    padding: 16px 0 0;
     border-bottom: 3px solid var(--gold);
     position: sticky;
     top: 0;
@@ -41,42 +41,45 @@ body {
 
 .header .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 12px;
 }
 
 .logo {
-    flex: 1;
-    min-width: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 .logo-img {
-    height: 90px;
+    height: 70px;
     width: auto;
     mix-blend-mode: screen;
-    margin: -10px 0; /* pull image flush — trims excess black padding in the JPG */
 }
 
 .nav {
     display: flex;
-    gap: 30px;
+    gap: 0;
     flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    width: 100%;
 }
 
 .nav a {
     color: var(--gold);
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px 18px;
     transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .nav a:hover {
     color: var(--text-white);
-    border-bottom: 2px solid var(--gold);
+    background-color: rgba(212, 175, 55, 0.1);
 }
 
 /* Hero Section */
@@ -921,13 +924,17 @@ body {
     }
 
     .logo {
-        min-width: 0;
         text-align: center;
     }
 
     .nav {
         justify-content: center;
-        gap: 16px;
+        gap: 0;
+    }
+
+    .nav a {
+        font-size: 13px;
+        padding: 8px 12px;
     }
 
     .hero {
