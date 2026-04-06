@@ -13,13 +13,19 @@ html {
     --gold: #d4af37;
     --black: #000000;
     --dark-gray: #1a1a1a;
+    --charcoal: #2c2c2c;
     --text-white: #ffffff;
+    --cream: #faf7f2;
+    --light-warm: #f0ebe0;
+    --card-white: #ffffff;
+    --text-dark: #2c2c2c;
+    --text-muted: #5a5a5a;
 }
 
 body {
     font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--black);
-    color: var(--text-white);
+    background-color: var(--cream);
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
@@ -86,7 +92,7 @@ body {
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(135deg, var(--cream) 0%, var(--light-warm) 100%);
 }
 
 .hero-title {
@@ -96,8 +102,8 @@ body {
 .hero-cross {
     height: 200px;
     width: auto;
-    filter: invert(1) sepia(1) hue-rotate(7deg) saturate(1.2) brightness(0.68);
-    mix-blend-mode: screen;
+    filter: sepia(0.35) saturate(1.2) brightness(0.85);
+    mix-blend-mode: multiply;
     opacity: 0.95;
     display: block;
     margin: 16px auto 24px;
@@ -128,7 +134,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
-    color: var(--text-white);
+    color: var(--text-dark);
 }
 
 .hero-verse {
@@ -138,7 +144,7 @@ body {
     padding: 12px 20px;
     font-style: italic;
     font-size: 16px;
-    color: #cccccc;
+    color: var(--text-muted);
     line-height: 1.8;
     text-align: left;
 }
@@ -155,7 +161,7 @@ body {
 /* Schedule Section */
 .schedule {
     padding: 80px 20px;
-    background-color: var(--dark-gray);
+    background-color: var(--light-warm);
 }
 
 .schedule h2 {
@@ -173,10 +179,11 @@ body {
 }
 
 .schedule-card {
-    background-color: var(--black);
+    background-color: var(--card-white);
     padding: 40px;
     border-left: 4px solid var(--gold);
     border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -207,7 +214,7 @@ body {
 
 .schedule-item h3 {
     font-size: 20px;
-    color: var(--text-white);
+    color: var(--text-dark);
     margin-bottom: 8px;
 }
 
@@ -220,13 +227,13 @@ body {
 
 .schedule-item .location {
     font-size: 14px;
-    color: #cccccc;
+    color: var(--text-muted);
 }
 
 /* Beliefs Section */
 .beliefs {
     padding: 80px 20px;
-    background-color: var(--black);
+    background-color: var(--cream);
 }
 
 .beliefs h2 {
@@ -241,9 +248,10 @@ body {
     max-width: 780px;
     margin: 0 auto 32px;
     padding: 32px 36px;
-    background-color: var(--dark-gray);
+    background-color: var(--card-white);
     border-left: 4px solid var(--gold);
     border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .belief-article h3 {
@@ -256,7 +264,7 @@ body {
 .belief-article p {
     font-size: 17px;
     line-height: 1.75;
-    color: var(--text-white);
+    color: var(--text-dark);
     margin: 0;
 }
 
@@ -272,7 +280,7 @@ body {
 
 .belief-gifts li {
     font-size: 16px;
-    color: #cccccc;
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
@@ -306,7 +314,7 @@ body {
 
 .belief-prayer p {
     font-size: 18px;
-    color: #cccccc;
+    color: var(--text-muted);
     font-style: italic;
     line-height: 1.7;
 }
@@ -314,7 +322,7 @@ body {
 /* Children's Ministries Section */
 .childrens {
     padding: 80px 20px;
-    background-color: var(--dark-gray);
+    background-color: var(--light-warm);
 }
 
 .childrens h2 {
@@ -328,7 +336,7 @@ body {
 .childrens-lead {
     text-align: center;
     font-size: 17px;
-    color: #cccccc;
+    color: var(--text-muted);
     line-height: 1.75;
     max-width: 720px;
     margin: 0 auto 50px;
@@ -341,11 +349,12 @@ body {
 }
 
 .childrens-card {
-    background-color: var(--black);
+    background-color: var(--card-white);
     padding: 36px 32px;
     border-radius: 8px;
     border-top: 4px solid var(--gold);
     text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -368,7 +377,7 @@ body {
 
 .childrens-card p {
     font-size: 16px;
-    color: #cccccc;
+    color: var(--text-muted);
     line-height: 1.7;
 }
 
@@ -389,19 +398,20 @@ body {
 
 .childrens-learn-list li {
     font-size: 17px;
-    color: var(--text-white);
+    color: var(--text-dark);
     padding: 14px 20px;
     border-left: 4px solid var(--gold);
-    background-color: var(--black);
+    background-color: var(--card-white);
     border-radius: 0 8px 8px 0;
     margin-bottom: 12px;
     line-height: 1.5;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
 }
 
 /* Locations Section */
 .locations {
     padding: 80px 20px;
-    background-color: var(--black);
+    background-color: var(--cream);
 }
 
 .locations h2 {
@@ -419,10 +429,11 @@ body {
 }
 
 .location-card {
-    background-color: var(--dark-gray);
+    background-color: var(--card-white);
     padding: 40px;
     border-radius: 8px;
     border-top: 4px solid var(--gold);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -450,7 +461,7 @@ body {
 /* Connect Section */
 .connect {
     padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(135deg, var(--light-warm) 0%, var(--cream) 100%);
     text-align: center;
 }
 
@@ -497,7 +508,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 20px;
-    background-color: var(--dark-gray);
+    background-color: var(--light-warm);
 }
 
 .contact h2 {
@@ -528,7 +539,7 @@ body {
 
 .contact-info a:hover {
     text-decoration: underline;
-    color: var(--text-white);
+    color: var(--charcoal);
 }
 
 /* Footer */
@@ -554,7 +565,7 @@ body {
 .events-hero {
     text-align: center;
     padding: 80px 20px 40px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(135deg, var(--cream) 0%, var(--light-warm) 100%);
 }
 
 .events-hero h1 {
@@ -567,12 +578,12 @@ body {
 
 .events-hero p {
     font-size: 18px;
-    color: #cccccc;
+    color: var(--text-muted);
 }
 
 .events-list {
     padding: 60px 20px 80px;
-    background-color: var(--black);
+    background-color: var(--cream);
 }
 
 .events-grid {
@@ -587,10 +598,11 @@ body {
     display: flex;
     gap: 28px;
     align-items: flex-start;
-    background-color: var(--dark-gray);
+    background-color: var(--card-white);
     border-left: 4px solid var(--gold);
     border-radius: 8px;
     padding: 28px 32px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -601,7 +613,7 @@ body {
 
 .event-card--past {
     opacity: 0.5;
-    border-left-color: #555;
+    border-left-color: #bbb;
 }
 
 .event-date-badge {
@@ -635,14 +647,14 @@ body {
 
 .event-details h3 {
     font-size: 22px;
-    color: var(--text-white);
+    color: var(--text-dark);
     margin-bottom: 10px;
 }
 
 .event-past-label {
     font-size: 12px;
-    background-color: #444;
-    color: #aaa;
+    background-color: #e0dbd0;
+    color: #888;
     padding: 2px 8px;
     border-radius: 4px;
     vertical-align: middle;
@@ -662,150 +674,20 @@ body {
 
 .event-location {
     font-size: 14px;
-    color: #cccccc;
+    color: var(--text-muted);
     margin-bottom: 10px;
 }
 
 .event-desc {
     font-size: 15px;
-    color: #aaaaaa;
+    color: var(--text-muted);
     line-height: 1.7;
 }
 
 .events-loading,
 .events-empty {
     text-align: center;
-    color: #aaaaaa;
-    font-size: 16px;
-    padding: 40px 0;
-}
-
-/* Events Page */
-.events-hero {
-    text-align: center;
-    padding: 80px 20px 40px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
-}
-
-.events-hero h1 {
-    font-size: 48px;
-    color: var(--gold);
-    margin-bottom: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.events-hero p {
-    font-size: 18px;
-    color: #cccccc;
-}
-
-.events-list {
-    padding: 60px 20px 80px;
-    background-color: var(--black);
-}
-
-.events-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    max-width: 860px;
-    margin: 0 auto;
-}
-
-.event-card {
-    display: flex;
-    gap: 28px;
-    align-items: flex-start;
-    background-color: var(--dark-gray);
-    border-left: 4px solid var(--gold);
-    border-radius: 8px;
-    padding: 28px 32px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
-}
-
-.event-card--past {
-    opacity: 0.5;
-    border-left-color: #555;
-}
-
-.event-date-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--gold);
-    color: var(--black);
-    border-radius: 6px;
-    min-width: 60px;
-    padding: 10px 8px;
-    font-weight: 700;
-    flex-shrink: 0;
-}
-
-.event-month {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.event-day {
-    font-size: 30px;
-    line-height: 1.1;
-}
-
-.event-details {
-    flex: 1;
-}
-
-.event-details h3 {
-    font-size: 22px;
-    color: var(--text-white);
-    margin-bottom: 10px;
-}
-
-.event-past-label {
-    font-size: 12px;
-    background-color: #444;
-    color: #aaa;
-    padding: 2px 8px;
-    border-radius: 4px;
-    vertical-align: middle;
-    font-weight: 400;
-    margin-left: 8px;
-}
-
-.event-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 14px;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.event-location {
-    font-size: 14px;
-    color: #cccccc;
-    margin-bottom: 10px;
-}
-
-.event-desc {
-    font-size: 15px;
-    color: #aaaaaa;
-    line-height: 1.7;
-}
-
-.events-loading,
-.events-empty {
-    text-align: center;
-    color: #aaaaaa;
+    color: var(--text-muted);
     font-size: 16px;
     padding: 40px 0;
 }
@@ -813,7 +695,7 @@ body {
 /* Prayer Request Section */
 .prayer {
     padding: 80px 20px;
-    background-color: var(--black);
+    background-color: var(--light-warm);
 }
 
 .prayer h2 {
@@ -828,7 +710,7 @@ body {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 50px;
-    color: #cccccc;
+    color: var(--text-muted);
     font-size: 16px;
     line-height: 1.8;
 }
@@ -855,11 +737,11 @@ body {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    background-color: var(--dark-gray);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background-color: var(--card-white);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 6px;
     padding: 14px 16px;
-    color: var(--text-white);
+    color: var(--text-dark);
     font-family: inherit;
     font-size: 16px;
     transition: border-color 0.3s ease;
