@@ -1077,6 +1077,14 @@ body {
         min-height: auto;
     }
 
+    .hero-watermark {
+        height: 90px;
+        right: 16px;
+        top: 28px;
+        transform: none;
+        opacity: 0.35;
+    }
+
     .hero h1 {
         font-size: 36px;
     }
