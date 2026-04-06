@@ -88,6 +88,39 @@ body {
     background-color: rgba(212, 175, 55, 0.1);
 }
 
+/* Hamburger toggle button — hidden on desktop */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--gold);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
@@ -800,23 +833,52 @@ body {
 
 /* Responsive — Tablet & below (≤768px) */
 @media (max-width: 768px) {
+    .header {
+        padding: 0;
+    }
+
     .header .container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-    }
-
-    .logo {
-        text-align: center;
-    }
-
-    .nav {
-        justify-content: center;
+        justify-content: space-between;
+        padding: 10px 16px;
         gap: 0;
     }
 
+    .logo {
+        text-align: left;
+    }
+
+    .logo-img {
+        height: 48px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        border-top: 1px solid rgba(212, 175, 55, 0.2);
+        margin-top: 8px;
+    }
+
+    .nav.nav--open {
+        display: flex;
+    }
+
     .nav a {
-        font-size: 13px;
-        padding: 8px 12px;
+        font-size: 14px;
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        letter-spacing: 0;
+    }
+
+    .nav a:last-child {
+        border-bottom: none;
     }
 
     .hero {
@@ -873,11 +935,7 @@ body {
 /* Responsive — Small phones (≤480px) */
 @media (max-width: 480px) {
     .logo-img {
-        height: 70px;
-    }
-
-    .nav a {
-        font-size: 14px;
+        height: 42px;
     }
 
     .hero {

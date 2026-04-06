@@ -19,7 +19,12 @@
       <div class="logo">
         <a href="index.html"><img src="logo.jpg" alt="Body of Christ Ministries" class="logo-img"></a>
       </div>
-      <nav class="nav" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="index.html#schedule">Service Times</a>
         <a href="events.html" aria-current="page">Events</a>
@@ -99,6 +104,23 @@
         `;
       }).join('');
     }
+  </script>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', function () {
+      const open = mainNav.classList.toggle('nav--open');
+      navToggle.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    mainNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('nav--open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   </script>
 
 </body>
