@@ -135,9 +135,7 @@ body {
 .hero-cross {
     height: 200px;
     width: auto;
-    filter: sepia(0.35) saturate(1.2) brightness(0.85);
-    mix-blend-mode: multiply;
-    opacity: 0.95;
+    opacity: 0.85;
     display: block;
     margin: 16px auto 24px;
 }
