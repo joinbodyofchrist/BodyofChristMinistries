@@ -88,6 +88,13 @@ const EVENTS = [
     description: "Join us for a bonfire evening of fellowship and community."
   },
   {
+    title: "Fish Fry",
+    date: "2026-08-16",
+    time: "12:00 PM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Join us for a fish fry! All are welcome!"
+  },
+  {
     title: "Bonfire at Church",
     date: "2026-09-02",
     time: "6:00 – 7:00 PM",
