@@ -100,5 +100,40 @@ const EVENTS = [
     time: "6:00 – 7:00 PM",
     location: "16 Bennett Ave, Council Bluffs, IA 51503",
     description: "Join us for a bonfire evening of fellowship and community."
+  },
+  {
+    title: "Women's Bible Study",
+    date: "2026-08-30",
+    time: "11:00 AM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Women's Bible Study immediately following the morning service. All women are welcome!"
+  },
+  {
+    title: "Women's Bible Study",
+    date: "2026-09-27",
+    time: "11:00 AM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Women's Bible Study immediately following the morning service. All women are welcome!"
+  },
+  {
+    title: "Women's Bible Study",
+    date: "2026-10-25",
+    time: "11:00 AM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Women's Bible Study immediately following the morning service. All women are welcome!"
+  },
+  {
+    title: "Women's Bible Study",
+    date: "2026-11-29",
+    time: "11:00 AM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Women's Bible Study immediately following the morning service. All women are welcome!"
+  },
+  {
+    title: "Women's Bible Study",
+    date: "2026-12-27",
+    time: "11:00 AM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Women's Bible Study immediately following the morning service. All women are welcome!"
   }
 ];
