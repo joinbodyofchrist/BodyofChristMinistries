@@ -162,6 +162,13 @@ const EVENTS = [
     date: "2026-12-11",
     time: "6:00 – 8:00 PM",
     location: "16 Bennett Ave, Council Bluffs, IA 51503",
-    description: "Celebrate Christmas together with friends and family at the church!"
+    description: "Celebrate the birth of Jesus with us! Join friends and family at the church as we rejoice in the greatest gift of all—Jesus Christ. Come celebrate His birth, share in the joy of Christmas, and make memories together!"
+  },
+  {
+    title: "Jesus Is Born!",
+    date: "2026-12-25",
+    time: "All day",
+    location: "Everywhere",
+    description: "Today we celebrate the birth of our Savior, Jesus Christ. Rejoice in the greatest gift ever given!<br><br><strong>Merry Christmas!</strong>"
   }
 ];
