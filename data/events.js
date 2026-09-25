@@ -135,5 +135,33 @@ const EVENTS = [
     time: "11:00 AM",
     location: "16 Bennett Ave, Council Bluffs, IA 51503",
     description: "Women's Bible Study immediately following the morning service. All women are welcome!"
+  },
+  {
+    title: "Bonfire at Church — Last One!",
+    date: "2026-10-07",
+    time: "6:00 PM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Join us for the last bonfire of the season at church!"
+  },
+  {
+    title: "Potluck and Pumpkin Disguise Contest",
+    date: "2026-10-11",
+    time: "After Church",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Bring a dish to share and join the pumpkin disguise contest after church!"
+  },
+  {
+    title: "Bible Study at Church",
+    date: "2026-10-14",
+    time: "6:00 PM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Bible study is at church instead of Sozo Coffee House."
+  },
+  {
+    title: "Christmas Party",
+    date: "2026-12-11",
+    time: "6:00 – 8:00 PM",
+    location: "16 Bennett Ave, Council Bluffs, IA 51503",
+    description: "Celebrate Christmas together with friends and family at the church!"
   }
 ];
